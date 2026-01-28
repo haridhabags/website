@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Everyday Cotton Tote — Natural",
+    "price": 1499,
+    "tags": ["Everyday"],
+    "img": "assets/products/everyday-natural.svg",
+    "badge": "♻ Organic",
+    "alt": "Everyday cotton tote in Natural"
+  },
+  {
+    "name": "Market Carryall — Olive",
+    "price": 1899,
+    "tags": ["Market"],
+    "img": "assets/products/market-olive.svg",
+    "badge": "New",
+    "alt": "Olive market carryall tote"
+  },
+  {
+    "name": "Work Tote — Charcoal",
+    "price": 2299,
+    "tags": ["Work"],
+    "img": "assets/products/work-charcoal.svg",
+    "badge": "Limited",
+    "alt": "Charcoal work tote"
+  },
+  {
+    "name": "Compact City Tote — Cacao",
+    "price": 1299,
+    "tags": ["Compact","Everyday"],
+    "img": "assets/products/compact-cacao.svg",
+    "badge": "♻ Organic",
+    "alt": "Compact tote in cacao color"
+  },
+  {
+    "name": "Travel Weekender Tote — Natural",
+    "price": 2699,
+    "tags": ["Market","Work"],
+    "img": "assets/products/travel-weekender.svg",
+    "badge": "",
+    "alt": "Natural travel weekender tote"
+  }
+]
