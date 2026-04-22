@@ -1,17 +1,17 @@
 [
   {
     "name": "Everyday Cotton Tote — Natural",
-    "price": 1499,
+    "price": 499,
     "tags": ["Everyday"],
     "img": "assets/products/tote-1.jpg",
     "badge": "♻ Organic",
     "alt": "Everyday cotton tote in Natural"
   },
   {
-    "name": "Market Carryall — Olive",
-    "price": 1899,
+    "name": "Every Day - Stamp",
+    "price": 499,
     "tags": ["Market"],
-    "img": "assets/products/market-olive.svg",
+    "img": "assets/products/tote-black-stamp.png",
     "badge": "New",
     "alt": "Olive market carryall tote"
   },
