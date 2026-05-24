@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haridha Image Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .image-card { border: 1px solid #ddd; padding: 10px; border-radius: 8px; }
+        .image-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+        .image-card h3 { margin: 10px 0 5px 0; }
+        .image-card p { color: #666; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h1>Haridha Tote Bag Images Test</h1>
+    <p>If you can see the images below, then the images are working correctly!</p>
+
+    <div class="image-grid">
+        <div class="image-card">
+            <img src="assets/images/tote_bags_catlog/11.png" alt="Tote Bag 11" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; color: red;">Image failed to load</div>
+            <h3>Everyday Cotton Tote</h3>
+            <p>Image: 11.png (4.59MB)</p>
+        </div>
+
+        <div class="image-card">
+            <img src="assets/images/tote_bags_catlog/12.png" alt="Tote Bag 12" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; color: red;">Image failed to load</div>
+            <h3>Market Carryall</h3>
+            <p>Image: 12.png (4.73MB)</p>
+        </div>
+
+        <div class="image-card">
+            <img src="assets/images/tote_bags_catlog/13.png" alt="Tote Bag 13" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; color: red;">Image failed to load</div>
+            <h3>Work Tote</h3>
+            <p>Image: 13.png (4.70MB)</p>
+        </div>
+
+        <div class="image-card">
+            <img src="assets/images/tote_bags_catlog/14.png" alt="Tote Bag 14" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; color: red;">Image failed to load</div>
+            <h3>Compact City Tote</h3>
+            <p>Image: 14.png (4.76MB)</p>
+        </div>
+
+        <div class="image-card">
+            <img src="assets/images/tote_bags_catlog/15.png" alt="Tote Bag 15" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; color: red;">Image failed to load</div>
+            <h3>Travel Weekender</h3>
+            <p>Image: 15.png (5.31MB)</p>
+        </div>
+
+        <div class="image-card">
+            <img src="assets/products/tote-1.jpg" alt="Tote 1 JPG" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; color: red;">Image failed to load</div>
+            <h3>Hero Image (JPG)</h3>
+            <p>Image: tote-1.jpg (0.06MB)</p>
+        </div>
+    </div>
+
+    <p><strong>Instructions:</strong> If you see red "Image failed to load" messages, the images aren't working. If you see the tote bag images, then they are loading correctly!</p>
+</body>
+</html>
