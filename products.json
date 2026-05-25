@@ -1,0 +1,52 @@
+﻿[
+    {
+        "name":  "Elegance",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/elegance.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Elegance"
+    },
+    {
+        "name":  "Fun",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/fun.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Fun"
+    },
+    {
+        "name":  "Girls Don\u0027t Cry",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/girls don\u0027t cry.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Girls Don\u0027t Cry"
+    },
+    {
+        "name":  "Stamp",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/stamp.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Stamp"
+    },
+    {
+        "name":  "Zen",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/zen.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Zen"
+    }
+]

@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Haridha — Sustainable organic tote bags handcrafted in Maharashtra. Shop premium cotton totes with natural prints and thoughtful design." />
+  <meta name="keywords" content="organic tote bag, cotton tote, sustainable bags, handcrafted totes, eco-friendly fashion, Haridha bags" />
+  <meta property="og:title" content="Haridha | Organic Cotton Tote Bags" />
+  <meta property="og:description" content="Handcrafted organic tote bags made in Maharashtra. Durable, stylish, and made for everyday carrying." />
+  <meta property="og:image" content="assets/images/tote_bags_catlog/elegance.png" />
+  <meta property="og:url" content="https://haridhabags.github.io/website/" />
+  <title>Haridha | Organic Cotton Tote Bags</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="nav container">
+      <a class="brand" href="#top" aria-label="Haridha homepage">
+        <img class="brand-logo" src="assets/brand/logo.png" alt="Haridha logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="#collection">Collection</a>
+        <a href="#why">Why Haridha</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="#collection">Shop now</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Handcrafted in Maharashtra</p>
+        <h1>Sustainable tote bags for everyday life.</h1>
+        <p class="hero-text">Premium organic cotton, durable stitching, and mindful prints for the modern shopper. Carry with ease, style, and purpose.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#collection">View collection</a>
+          <a class="btn btn-secondary" href="#why">Explore values</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img id="hero-image" src="" alt="Haridha tote bag on a white background" />
+      </div>
+    </section>
+
+    <section id="collection" class="product-filter container">
+      <div class="filter-row">
+        <div class="section-header">
+          <p class="eyebrow">Collection</p>
+          <h2>Our full tote collection</h2>
+        </div>
+        <div id="tag-list" class="tag-list"></div>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <section id="why" class="why container">
+      <div class="section-header">
+        <p class="eyebrow">Why Haridha</p>
+        <h2>Thoughtful design, natural materials, fair craft.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Organic fabric</h3>
+          <p>100% natural cotton with a soft hand feel and long-lasting strength.</p>
+        </div>
+        <div class="why-card">
+          <h3>Local craft</h3>
+          <p>Made in Maharashtra with careful stitching and responsible manufacturing.</p>
+        </div>
+        <div class="why-card">
+          <h3>Minimal style</h3>
+          <p>Timeless silhouettes and calm colors designed for daily life.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow">Ready to order?</p>
+          <h2>Connect with us on WhatsApp.</h2>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/1234567890?text=Hi%2C%20I%20would%20like%20to%20order%20a%20Haridha%20tote.">Message now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html">haridha</a>
+        <p>Quiet luxury. Handcrafted. Sustainable.</p>
+      </div>
+      <p>© 2026 Haridha. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const productGrid = document.getElementById('product-grid');
+    const tagList = document.getElementById('tag-list');
+    const heroImage = document.getElementById('hero-image');
+    let products = [];
+    let activeTag = 'All';
+
+    function renderProducts(items) {
+      if (items.length === 0) {
+        productGrid.innerHTML = '<p class="empty-state">No products available yet.</p>';
+        return;
+      }
+      productGrid.innerHTML = items.map(p => `
+        <article class="product-card">
+          <img src="${p.img}" alt="${p.alt}" loading="lazy" />
+          <div class="card-body">
+            <span class="product-badge">${p.badge || 'Haridha'}</span>
+            <h3>${p.name}</h3>
+            <p>${p.alt}</p>
+            <div class="card-footer">
+              <strong>₹${p.price}</strong>
+              <a class="btn btn-secondary" href="https://wa.me/1234567890?text=I'm%20interested%20in%20${encodeURIComponent(p.name)}">Order</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderTags(tags) {
+      tagList.innerHTML = tags.map(tag => `
+        <button class="tag ${tag === activeTag ? 'tag-active' : ''}" data-tag="${tag}">${tag}</button>
+      `).join('');
+      tagList.querySelectorAll('.tag').forEach(button => {
+        button.addEventListener('click', () => {
+          activeTag = button.dataset.tag;
+          filterProducts();
+        });
+      });
+    }
+
+    function setHeroImage(item) {
+      if (!heroImage || !item) return;
+      heroImage.src = item.img;
+      heroImage.alt = item.alt;
+    }
+
+    function filterProducts() {
+      const filtered = activeTag === 'All'
+        ? products
+        : products.filter(p => p.tags.includes(activeTag));
+      renderProducts(filtered);
+      renderTags(['All', ...new Set(products.flatMap(p => p.tags))]);
+      setHeroImage(filtered[0] || products[0]);
+    }
+
+    async function loadProducts() {
+      const response = await fetch('products.json');
+      products = await response.json();
+      renderTags(['All', ...new Set(products.flatMap(p => p.tags))]);
+      filterProducts();
+    }
+
+    loadProducts();
+  </script>
+</body>
+</html>

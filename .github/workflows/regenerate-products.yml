@@ -5,11 +5,11 @@ on:
     branches:
       - main
     paths:
-      - 'website/assets/images/tote_bags_catlog/**'
-      - 'website/generate-products.ps1'
-      - 'website/update-image.ps1'
-      - 'website/index.html'
-      - 'website/README.md'
+      - 'assets/images/tote_bags_catlog/**'
+      - 'generate-products.ps1'
+      - 'update-image.ps1'
+      - 'index.html'
+      - 'README.md'
       - '.github/workflows/regenerate-products.yml'
 
 jobs:
@@ -23,12 +23,46 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
+      - name: Create generate-products script (if missing)
+        run: |
+          if (-not (Test-Path "generate-products.ps1")) {
+            Write-Host "Script not found, using inline version"
+          }
+
       - name: Run product generator
-        working-directory: website
-        run: pwsh .\generate-products.ps1
+        shell: pwsh
+        run: |
+          # Create products.json from images in assets/images/tote_bags_catlog
+          $imageFolder = "assets/images/tote_bags_catlog"
+          $outputFile = "products.json"
+          $defaultPrice = 699
+
+          if (-not (Test-Path $imageFolder)) {
+              Write-Error "Image folder not found: $imageFolder"
+              exit 1
+          }
+
+          $images = Get-ChildItem -Path $imageFolder -File | Where-Object { $_.Extension -match '\.(png|jpg|jpeg|webp)$' } | Sort-Object Name
+          $products = @()
+          foreach ($img in $images) {
+              $name = [System.IO.Path]::GetFileNameWithoutExtension($img.Name)
+              $title = $name -replace '[-_0-9]+' , ' '
+              $title = (Get-Culture).TextInfo.ToTitleCase($title.ToLower()).Trim()
+              $obj = [PSCustomObject]@{
+                  name = $title
+                  price = $defaultPrice
+                  tags = @()
+                  img = "$imageFolder/$($img.Name)"
+                  badge = ""
+                  alt = "Haridha Tote - $title"
+              }
+              $products += $obj
+          }
+
+          $products | ConvertTo-Json -Depth 4 | Set-Content -Path $outputFile -Encoding UTF8
+          Write-Host "Wrote $($products.Count) products to $outputFile"
 
       - name: Commit updated products.json
-        working-directory: website
         shell: pwsh
         run: |
           git config user.name "github-actions[bot]"
