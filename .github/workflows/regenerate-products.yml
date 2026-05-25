@@ -1,0 +1,43 @@
+name: Regenerate website products
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'website/assets/images/tote_bags_catlog/**'
+      - 'website/generate-products.ps1'
+      - 'website/update-image.ps1'
+      - 'website/index.html'
+      - 'website/README.md'
+      - '.github/workflows/regenerate-products.yml'
+
+jobs:
+  regenerate-products:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Run product generator
+        working-directory: website
+        run: pwsh .\generate-products.ps1
+
+      - name: Commit updated products.json
+        working-directory: website
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add products.json
+          git diff --cached --quiet -- products.json
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m "chore: regenerate products.json from tote_bags_catlog"
+            git push
+          } else {
+            Write-Host "No changes to products.json"
+          }

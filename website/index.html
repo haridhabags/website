@@ -1,622 +1,165 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Haridha — Premium organic cotton tote bags handcrafted in Maharashtra. 100% natural fabric, fade-proof prints, and durable stitching. Shop sustainable fashion." />
-  <meta name="keywords" content="organic cotton totes, premium handcrafted bags, sustainable fashion, cotton tote bags India, woman-led MSME, eco-friendly bags" />
-  <meta name="author" content="Haridha" />
-  <meta property="og:title" content="Haridha — Premium Organic Cotton Tote Bags" />
-  <meta property="og:description" content="Elegantly designed, handcrafted organic cotton totes. 100% natural, fade-proof, durable. Meet The Academic, The Executive, and The Urban Explorer." />
-  <meta property="og:image" content="assets/images/hero-bag.jpg" />
+  <meta name="description" content="Haridha — Sustainable organic tote bags handcrafted in Maharashtra. Shop premium cotton totes with natural prints and thoughtful design." />
+  <meta name="keywords" content="organic tote bag, cotton tote, sustainable bags, handcrafted totes, eco-friendly fashion, Haridha bags" />
+  <meta property="og:title" content="Haridha | Organic Cotton Tote Bags" />
+  <meta property="og:description" content="Handcrafted organic tote bags made in Maharashtra. Durable, stylish, and made for everyday carrying." />
+  <meta property="og:image" content="assets/images/tote_bags_catlog/elegance.png" />
   <meta property="og:url" content="https://haridhabags.github.io/website/" />
-  <title>Premium Organic Cotton Tote Bags | Haridha | Handcrafted in Maharashtra</title>
-
-  <!-- Fonts -->
+  <title>Haridha | Organic Cotton Tote Bags</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root{
-      --bg:#FBF9F6;
-      --ink:#1A1614;
-      --surface:#F4F0EB;
-      --accent:#6B7B5A;
-      --accent-warm:#8B7355;
-      --muted:#7A7A78;
-      --light-text:#999999;
-      --display:"Lora", serif;
-      --body:"Inter", sans-serif;
-      --fs-h1:clamp(2.5rem, 6vw, 4rem);
-      --fs-h2:clamp(2rem, 4vw, 2.8rem);
-      --fs-h3:clamp(1.3rem, 2vw, 1.8rem);
-      --fs-body:1.05rem;
-      --radius:12px;
-      --shadow:0 8px 24px rgba(26, 22, 20, 0.08);
-      --shadow-lg:0 12px 36px rgba(26, 22, 20, 0.12);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:var(--bg);
-      font-family:var(--body);
-      line-height:1.75;
-      font-size:var(--fs-body);
-    }
-
-    /* Header & Nav */
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(251, 249, 246, 0.98);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(26, 22, 20, 0.05);
-      padding:16px 20px;
-    }
-    .nav{
-      max-width:1200px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .brand{
-      font-family:var(--display);
-      font-size:28px;
-      font-weight:600;
-      letter-spacing:0.5px;
-      text-decoration:none;
-      color:var(--ink);
-    }
-    .brand:hover{
-      color:var(--accent);
-    }
-
-
-    /* Hero Section */
-    .hero{
-      max-width:1200px;
-      margin:0 auto;
-      padding:80px 20px 60px;
-      display:grid;
-      grid-template-columns:1fr 1.1fr;
-      gap:60px;
-      align-items:center;
-    }
-    .hero-content h1{
-      font-family:var(--display);
-      font-size:var(--fs-h1);
-      line-height:1.15;
-      margin:0 0 24px 0;
-      letter-spacing:-0.5px;
-      font-weight:600;
-    }
-    .hero-content p{
-      font-size:1.125rem;
-      color:var(--muted);
-      margin-bottom:32px;
-      line-height:1.8;
-    }
-    .hero-figure img{
-      width:100%;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow-lg);
-    }
-
-    /* Buttons */
-    .btn-wa{
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      padding:14px 32px;
-      border-radius:50px;
-      font-weight:600;
-      font-size:0.95rem;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      transition:all 0.3s ease;
-      border:none;
-      cursor:pointer;
-    }
-    .btn-wa:hover{
-      background:var(--ink);
-      transform:translateY(-2px);
-      box-shadow:0 6px 20px rgba(107, 123, 90, 0.25);
-    }
-    .btn-secondary{
-      background:transparent;
-      color:var(--accent);
-      border:2px solid var(--accent);
-    }
-    .btn-secondary:hover{
-      background:var(--accent);
-      color:#fff;
-    }
-
-
-    /* Why Haridha Section */
-    .why-haridha{
-      background:var(--surface);
-      padding:80px 20px;
-      margin:60px 0;
-    }
-    .section-container{
-      max-width:1200px;
-      margin:0 auto;
-    }
-    .section-title{
-      font-family:var(--display);
-      font-size:var(--fs-h2);
-      text-align:center;
-      margin:0 0 50px 0;
-      letter-spacing:-0.3px;
-    }
-    .values{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-      gap:40px;
-    }
-    .value-card{
-      background:#fff;
-      padding:40px 30px;
-      border-radius:var(--radius);
-      text-align:center;
-      box-shadow:var(--shadow);
-      transition:all 0.3s ease;
-    }
-    .value-card:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-lg);
-    }
-    .value-card i{
-      font-size:42px;
-      color:var(--accent);
-      margin-bottom:16px;
-      display:block;
-    }
-    .value-card h3{
-      font-family:var(--display);
-      font-size:1.4rem;
-      margin:0 0 12px 0;
-      color:var(--ink);
-    }
-    .value-card p{
-      color:var(--light-text);
-      margin:0;
-      line-height:1.7;
-    }
-
-      color:var(--accent);
-      margin-bottom:15px;
-    }
-
-    /* Lifestyle Sections */
-    .lifestyle-section{
-      max-width:1200px;
-      margin:80px auto;
-      padding:0 20px;
-    }
-    .lifestyle-section-title{
-      font-family:var(--display);
-      font-size:var(--fs-h2);
-      text-align:center;
-      margin-bottom:60px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-      gap:40px;
-    }
-    .lifestyle-card{
-      background:#fff;
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      transition:all 0.3s ease;
-    }
-    .lifestyle-card:hover{
-      transform:translateY(-8px);
-      box-shadow:var(--shadow-lg);
-    }
-    .lifestyle-card img{
-      width:100%;
-      height:360px;
-      object-fit:cover;
-    }
-    .lifestyle-card .content{
-      padding:32px;
-    }
-    .lifestyle-card h3{
-      font-family:var(--display);
-      font-size:var(--fs-h3);
-      margin:0 0 12px 0;
-      color:var(--ink);
-    }
-    .lifestyle-card p{
-      color:var(--muted);
-      margin:0 0 20px 0;
-      line-height:1.7;
-    }
-    .lifestyle-card .badge{
-      display:inline-block;
-      font-size:0.85rem;
-      color:var(--accent);
-      font-weight:600;
-      padding:6px 12px;
-      background:rgba(107, 123, 90, 0.1);
-      border-radius:50px;
-      margin-bottom:12px;
-    }
-
-
-    /* Buttons */
-    .btn-wa{
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      padding:12px 25px;
-      border-radius:50px;
-      font-weight:600;
-      display:inline-block;
-      transition:0.3s;
-    }
-    .btn-wa:hover{ background:var(--ink); }
-
-    .floating-wa{
-      position:fixed;
-      bottom:30px;
-      right:30px;
-      background:#25d366;
-      color:white;
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:30px;
-      box-shadow:0 4px 15px rgba(0,0,0,0.2);
-      z-index:1000;
-      text-decoration:none;
-      transition:all 0.3s ease;
-    }
-    .floating-wa:hover{
-      transform:scale(1.1);
-      box-shadow:0 6px 20px rgba(0,0,0,0.3);
-    }
-
-    /* Footer */
-    footer{
-      background:var(--ink);
-      color:#fff;
-      padding:60px 20px;
-      text-align:center;
-      margin-top:100px;
-    }
-    .footer-inner{
-      max-width:1200px;
-      margin:0 auto;
-    }
-    .footer-inner h4{
-      font-family:var(--display);
-      font-size:1.8rem;
-      margin:0 0 16px 0;
-      letter-spacing:0.5px;
-    }
-    .footer-inner p{
-      margin:8px 0;
-      line-height:1.8;
-    }
-    .footer-inner .tagline{
-      font-style:italic;
-      color:#d4d4d0;
-      margin-top:20px;
-      font-size:0.95rem;
-    }
-    .footer-inner .msme-badge{
-      display:inline-block;
-      margin-top:16px;
-      padding:12px 24px;
-      background:rgba(255,255,255,0.1);
-      border-radius:50px;
-      font-weight:600;
-      font-size:0.9rem;
-      color:#f0e68c;
-    }
-
-    /* Products Section */
-    .products-section{
-      padding:80px 20px;
-      background:#fff;
-    }
-    .products-grid{
-      max-width:1200px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-      gap:32px;
-    }
-    .product-card{
-      background:#fff;
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      transition:all 0.3s ease;
-      border:1px solid rgba(26, 22, 20, 0.05);
-    }
-    .product-card:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-lg);
-    }
-    .product-card img{
-      width:100%;
-      height:280px;
-      object-fit:cover;
-      background:#f4f0eb;
-      border-radius:8px;
-    }
-    .product-card .content{
-      padding:24px;
-    }
-    .product-card h3{
-      font-family:var(--display);
-      font-size:1.2rem;
-      margin:0 0 8px 0;
-      color:var(--ink);
-      line-height:1.4;
-    }
-    .product-card .price{
-      font-size:1.1rem;
-      font-weight:600;
-      color:var(--accent);
-      margin-bottom:12px;
-    }
-    .product-card .badge{
-      display:inline-block;
-      font-size:0.8rem;
-      color:var(--accent);
-      font-weight:600;
-      padding:4px 8px;
-      background:rgba(107, 123, 90, 0.1);
-      border-radius:50px;
-      margin-bottom:12px;
-    }
-    .product-card .tags{
-      font-size:0.85rem;
-      color:var(--muted);
-      margin-bottom:16px;
-    }
-    .product-card .btn-wa{
-      width:100%;
-      text-align:center;
-      padding:12px;
-      font-size:0.9rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding:60px 20px 40px;
-        gap:40px;
-        text-align:center;
-      }
-      .hero-content h1{
-        font-size:2rem;
-      }
-      .section-title, .lifestyle-section-title{
-        font-size:1.8rem;
-      }
-      .grid, .values, .products-grid{
-        gap:24px;
-      }
-      .product-card .content{
-        padding:20px;
-      }
-      .product-card h3{
-        font-size:1.1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
+<body id="top">
   <header class="site-header">
-    <div class="nav">
-      <a href="#" class="brand">haridha</a>
-      <a href="https://wa.me/1234567890?text=Hi! I'm interested in Haridha cotton tote bags. Can you share the latest collection?" class="btn-wa">
-        <i class="fab fa-whatsapp"></i> Order Now
+    <div class="nav container">
+      <a class="brand" href="#top" aria-label="Haridha homepage">
+        <img class="brand-logo" src="assets/brand/logo.png" alt="Haridha logo" />
       </a>
+      <nav class="nav-links">
+        <a href="#collection">Collection</a>
+        <a href="#why">Why Haridha</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="#collection">Shop now</a>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Quiet Luxury, Elegantly Carried</h1>
-        <p>Haridha creates premium organic cotton tote bags for those who value timeless elegance and sustainability. Each bag is handcrafted in Maharashtra with 100% natural fabric, fade-proof prints, and reinforced stitching—built to last through every season.</p>
-        <a href="https://wa.me/1234567890?text=Hi! I want to see the latest Haridha collection." class="btn-wa">
-          <i class="fab fa-whatsapp"></i> Explore Our Collection
-        </a>
-      </div>
-      <div class="hero-figure">
-        <img src="assets/products/tote-1.jpg" alt="Haridha Premium Organic Cotton Tote Bag - Natural" />
-      </div>
-    </section>
-
-    <!-- Why Haridha Section -->
-    <section class="why-haridha">
-      <div class="section-container">
-        <h2 class="section-title">Why Choose Haridha</h2>
-        <div class="values">
-          <div class="value-card">
-            <i class="fas fa-leaf"></i>
-            <h3>100% Organic Cotton</h3>
-            <p>We use premium, naturally grown cotton that feels luxurious against the skin. No synthetics. No compromises.</p>
-          </div>
-          <div class="value-card">
-            <i class="fas fa-droplet-slash"></i>
-            <h3>Fade-Proof Prints</h3>
-            <p>Our signature printing technique ensures vibrant designs remain elegant even after countless washes. Enjoy lasting beauty.</p>
-          </div>
-          <div class="value-card">
-            <i class="fas fa-award"></i>
-            <h3>Built to Endure</h3>
-            <p>Reinforced stitching and generous capacity make these bags your everyday companion for years. Dependable luxury that grows more beautiful with use.</p>
-          </div>
-          <div class="value-card">
-            <i class="fas fa-earth-americas"></i>
-            <h3>Sustainably Made</h3>
-            <p>Every Haridha bag is crafted ethically in Maharashtra by skilled artisans. Supporting local craftsmanship, one tote at a time.</p>
-          </div>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Handcrafted in Maharashtra</p>
+        <h1>Sustainable tote bags for everyday life.</h1>
+        <p class="hero-text">Premium organic cotton, durable stitching, and mindful prints for the modern shopper. Carry with ease, style, and purpose.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#collection">View collection</a>
+          <a class="btn btn-secondary" href="#why">Explore values</a>
         </div>
+      </div>
+      <div class="hero-image">
+        <img id="hero-image" src="" alt="Haridha tote bag on a white background" />
       </div>
     </section>
 
-    <!-- Lifestyle Collections -->
-    <section class="lifestyle-section">
-      <h2 class="lifestyle-section-title">Designed for Your Lifestyle</h2>
-      <div class="grid">
-        <!-- The Academic -->
-        <div class="lifestyle-card">
-          <img src="assets/products/everyday-natural.svg" alt="The Academic - Premium Cotton Tote for Students and Book Lovers" />
-          <div class="content">
-            <span class="badge">♻ Organic Cotton</span>
-            <h3>The Academic</h3>
-            <p>Spacious enough for textbooks, notebooks, and research materials. A refined companion for lectures, libraries, and intellectual pursuits.</p>
-            <a href="https://wa.me/1234567890?text=I'm interested in The Academic tote bag." class="btn-wa">Learn More</a>
-          </div>
+    <section id="collection" class="product-filter container">
+      <div class="filter-row">
+        <div class="section-header">
+          <p class="eyebrow">Collection</p>
+          <h2>Our full tote collection</h2>
         </div>
+        <div id="tag-list" class="tag-list"></div>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
 
-        <!-- The Executive -->
-        <div class="lifestyle-card">
-          <img src="assets/products/work-charcoal.svg" alt="The Executive - Professional Cotton Tote for Office and Business" />
-          <div class="content">
-            <span class="badge">Premium Crafted</span>
-            <h3>The Executive</h3>
-            <p>An understated statement piece for the modern professional. Carries your laptop, documents, and essentials with effortless sophistication.</p>
-            <a href="https://wa.me/1234567890?text=I'm interested in The Executive tote bag." class="btn-wa">Learn More</a>
-          </div>
+    <section id="why" class="why container">
+      <div class="section-header">
+        <p class="eyebrow">Why Haridha</p>
+        <h2>Thoughtful design, natural materials, fair craft.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Organic fabric</h3>
+          <p>100% natural cotton with a soft hand feel and long-lasting strength.</p>
         </div>
-
-        <!-- The Urban Explorer -->
-        <div class="lifestyle-card">
-          <img src="assets/products/market-olive.svg" alt="The Urban Explorer - Versatile Cotton Tote for Adventure and Discovery" />
-          <div class="content">
-            <span class="badge">Made in Maharashtra</span>
-            <h3>The Urban Explorer</h3>
-            <p>Perfect for market runs, weekend getaways, and city adventures. Durable, washable, and ready for wherever your day takes you.</p>
-            <a href="https://wa.me/1234567890?text=I'm interested in The Urban Explorer tote bag." class="btn-wa">Learn More</a>
-          </div>
+        <div class="why-card">
+          <h3>Local craft</h3>
+          <p>Made in Maharashtra with careful stitching and responsible manufacturing.</p>
+        </div>
+        <div class="why-card">
+          <h3>Minimal style</h3>
+          <p>Timeless silhouettes and calm colors designed for daily life.</p>
         </div>
       </div>
     </section>
 
-    <!-- All Products Section -->
-    <section class="products-section">
-      <div class="section-container">
-        <h2 class="section-title">Our Complete Collection</h2>
-        <div id="products-grid" class="products-grid">
-          <!-- Static products for testing -->
-          <div class="product-card">
-            <img src="assets/images/tote_bags_catlog/11.png?v=20240415" alt="Everyday Cotton Tote — Natural" loading="lazy">
-            <div class="content">
-              <h3>Everyday Cotton Tote — Natural</h3>
-              <div class="price">₹1,499</div>
-              <span class="badge">♻ Organic</span>
-              <div class="tags">Everyday</div>
-              <a href="https://wa.me/1234567890?text=Hi! I'm interested in Everyday Cotton Tote — Natural (₹1499). Can you provide more details?" class="btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> Order Now
-              </a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/images/tote_bags_catlog/12.png?v=20240415" alt="Market Carryall — Olive" loading="lazy">
-            <div class="content">
-              <h3>Market Carryall — Olive</h3>
-              <div class="price">₹1,899</div>
-              <span class="badge">New</span>
-              <div class="tags">Market</div>
-              <a href="https://wa.me/1234567890?text=Hi! I'm interested in Market Carryall — Olive (₹1899). Can you provide more details?" class="btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> Order Now
-              </a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/images/tote_bags_catlog/13.png?v=20240415" alt="Work Tote — Charcoal" loading="lazy">
-            <div class="content">
-              <h3>Work Tote — Charcoal</h3>
-              <div class="price">₹2,299</div>
-              <span class="badge">Limited</span>
-              <div class="tags">Work</div>
-              <a href="https://wa.me/1234567890?text=Hi! I'm interested in Work Tote — Charcoal (₹2299). Can you provide more details?" class="btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> Order Now
-              </a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/images/tote_bags_catlog/14.png?v=20240415" alt="Compact City Tote — Cacao" loading="lazy">
-            <div class="content">
-              <h3>Compact City Tote — Cacao</h3>
-              <div class="price">₹1,299</div>
-              <span class="badge">♻ Organic</span>
-              <div class="tags">Compact, Everyday</div>
-              <a href="https://wa.me/1234567890?text=Hi! I'm interested in Compact City Tote — Cacao (₹1299). Can you provide more details?" class="btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> Order Now
-              </a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/images/tote_bags_catlog/15.png?v=20240415" alt="Travel Weekender Tote — Natural" loading="lazy">
-            <div class="content">
-              <h3>Travel Weekender Tote — Natural</h3>
-              <div class="price">₹2,699</div>
-              <div class="tags">Market, Work</div>
-              <a href="https://wa.me/1234567890?text=Hi! I'm interested in Travel Weekender Tote — Natural (₹2699). Can you provide more details?" class="btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> Order Now
-              </a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/products/tote-1.jpg?v=20240415" alt="Minimalist Tote — White" loading="lazy">
-            <div class="content">
-              <h3>Minimalist Tote — White</h3>
-              <div class="price">₹1,399</div>
-              <span class="badge">Clean Design</span>
-              <div class="tags">Everyday</div>
-              <a href="https://wa.me/1234567890?text=Hi! I'm interested in Minimalist Tote — White (₹1399). Can you provide more details?" class="btn-wa" target="_blank">
-                <i class="fab fa-whatsapp"></i> Order Now
-              </a>
-            </div>
-          </div>
+    <section id="contact" class="contact container">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow">Ready to order?</p>
+          <h2>Connect with us on WhatsApp.</h2>
         </div>
+        <a class="btn btn-primary" href="https://wa.me/1234567890?text=Hi%2C%20I%20would%20like%20to%20order%20a%20Haridha%20tote.">Message now</a>
       </div>
     </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <h4>haridha</h4>
-      <p class="tagline">Quiet Luxury. Handcrafted. Sustainable.</p>
-      <p><strong>Woman-Led MSME Enterprise</strong></p>
-      <p>Handcrafted in Maharashtra, India</p>
-      <div class="msme-badge">
-        <i class="fas fa-heart"></i> 100% Handmade | 100% Organic Cotton | 100% Sustainable
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html">haridha</a>
+        <p>Quiet luxury. Handcrafted. Sustainable.</p>
       </div>
-      <p style="margin-top:20px; font-size:0.9rem; color:#a8a8a4;">© 2024 Haridha. All rights reserved.</p>
+      <p>© 2026 Haridha. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/1234567890" target="_blank" class="floating-wa" title="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <script>
+    const productGrid = document.getElementById('product-grid');
+    const tagList = document.getElementById('tag-list');
+    const heroImage = document.getElementById('hero-image');
+    let products = [];
+    let activeTag = 'All';
 
+    function renderProducts(items) {
+      if (items.length === 0) {
+        productGrid.innerHTML = '<p class="empty-state">No products available yet.</p>';
+        return;
+      }
+      productGrid.innerHTML = items.map(p => `
+        <article class="product-card">
+          <img src="${p.img}" alt="${p.alt}" loading="lazy" />
+          <div class="card-body">
+            <span class="product-badge">${p.badge || 'Haridha'}</span>
+            <h3>${p.name}</h3>
+            <p>${p.alt}</p>
+            <div class="card-footer">
+              <strong>₹${p.price}</strong>
+              <a class="btn btn-secondary" href="https://wa.me/1234567890?text=I'm%20interested%20in%20${encodeURIComponent(p.name)}">Order</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderTags(tags) {
+      tagList.innerHTML = tags.map(tag => `
+        <button class="tag ${tag === activeTag ? 'tag-active' : ''}" data-tag="${tag}">${tag}</button>
+      `).join('');
+      tagList.querySelectorAll('.tag').forEach(button => {
+        button.addEventListener('click', () => {
+          activeTag = button.dataset.tag;
+          filterProducts();
+        });
+      });
+    }
+
+    function setHeroImage(item) {
+      if (!heroImage || !item) return;
+      heroImage.src = item.img;
+      heroImage.alt = item.alt;
+    }
+
+    function filterProducts() {
+      const filtered = activeTag === 'All'
+        ? products
+        : products.filter(p => p.tags.includes(activeTag));
+      renderProducts(filtered);
+      renderTags(['All', ...new Set(products.flatMap(p => p.tags))]);
+      setHeroImage(filtered[0] || products[0]);
+    }
+
+    async function loadProducts() {
+      const response = await fetch('products.json');
+      products = await response.json();
+      renderTags(['All', ...new Set(products.flatMap(p => p.tags))]);
+      filterProducts();
+    }
+
+    loadProducts();
+  </script>
 </body>
 </html>

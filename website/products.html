@@ -1,57 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=index.html#collection" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haridha Products | Premium Cotton Totes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Haridha | Redirecting</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav">
-      <a href="index.html" class="brand">haridha</a>
-      <a href="https://wa.me/1234567890?text=Hi! I’d like to order a Haridha tote." class="btn-wa">
-        <i class="fab fa-whatsapp"></i> Order Now
-      </a>
-    </div>
-  </header>
-
-  <main class="section-container">
-    <h1 class="section-title">Our Collection</h1>
-    <div id="product-grid" class="grid"></div>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <h4>haridha</h4>
-      <p class="tagline">Quiet Luxury. Handcrafted. Sustainable.</p>
-      <p>© 2026 Haridha. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    async function loadProducts() {
-      const response = await fetch('products.json');
-      const products = await response.json();
-      const grid = document.getElementById('product-grid');
-
-      products.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'lifestyle-card';
-        card.innerHTML = `
-          <img src="${p.img}" alt="${p.alt}" />
-          <div class="content">
-            <span class="badge">${p.badge || 'Premium'}</span>
-            <h3>${p.name}</h3>
-            <p>₹${p.price}</p>
-            <a href="https://wa.me/1234567890?text=I'm interested in ${p.name}" class="btn-wa">Order via WhatsApp</a>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-    loadProducts();
-  </script>
+  <p>If you are not redirected automatically, <a href="index.html#collection">click here to view the collection</a>.</p>
 </body>
 </html>

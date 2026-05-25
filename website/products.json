@@ -1,100 +1,52 @@
-[
-  {
-    "name": "Everyday Cotton Tote — Natural",
-    "price": 1499,
-    "tags": ["Everyday"],
-    "img": "assets/images/tote_bags_catlog/11.png",
-    "badge": "♻ Organic",
-    "alt": "Everyday cotton tote in Natural - Premium organic cotton tote bag"
-  },
-  {
-    "name": "Market Carryall — Olive",
-    "price": 1899,
-    "tags": ["Market"],
-    "img": "assets/images/tote_bags_catlog/12.png",
-    "badge": "New",
-    "alt": "Olive market carryall tote - Spacious organic cotton tote for shopping"
-  },
-  {
-    "name": "Work Tote — Charcoal",
-    "price": 2299,
-    "tags": ["Work"],
-    "img": "assets/images/tote_bags_catlog/13.png",
-    "badge": "Limited",
-    "alt": "Charcoal work tote - Professional organic cotton tote for office"
-  },
-  {
-    "name": "Compact City Tote — Cacao",
-    "price": 1299,
-    "tags": ["Compact","Everyday"],
-    "img": "assets/images/tote_bags_catlog/14.png",
-    "badge": "♻ Organic",
-    "alt": "Compact tote in cacao color - Small organic cotton tote for daily use"
-  },
-  {
-    "name": "Travel Weekender Tote — Natural",
-    "price": 2699,
-    "tags": ["Market","Work"],
-    "img": "assets/images/tote_bags_catlog/15.png",
-    "badge": "",
-    "alt": "Natural travel weekender tote - Large organic cotton tote for travel"
-  },
-  {
-    "name": "The Executive — Charcoal",
-    "price": 2299,
-    "tags": ["Work"],
-    "img": "assets/images/tote_bags_catlog/13.png",
-    "badge": "Premium",
-    "alt": "Charcoal work tote with elegant design - Premium organic cotton tote"
-  },
-  {
-    "name": "The Academic — Natural",
-    "price": 1699,
-    "tags": ["Everyday"],
-    "img": "assets/images/tote_bags_catlog/11.png",
-    "badge": "♻ Organic",
-    "alt": "The Academic tote - Organic cotton tote for students and book lovers"
-  },
-  {
-    "name": "Urban Explorer — Olive",
-    "price": 1999,
-    "tags": ["Market"],
-    "img": "assets/images/tote_bags_catlog/12.png",
-    "badge": "Adventure Ready",
-    "alt": "Urban Explorer olive tote - Durable organic cotton tote for city adventures"
-  },
-  {
-    "name": "Minimalist Tote — White",
-    "price": 1399,
-    "tags": ["Everyday"],
-    "img": "assets/products/tote-1.jpg",
-    "badge": "Clean Design",
-    "alt": "Minimalist white tote - Simple organic cotton tote for everyday elegance"
-  },
-  {
-    "name": "Canvas Carryall — Beige",
-    "price": 1799,
-    "tags": ["Market"],
-    "img": "assets/images/tote_bags_catlog/15.png",
-    "badge": "Spacious",
-    "alt": "Beige canvas carryall - Large organic cotton tote for shopping and travel"
-  },
-  {
-    "name": "Professional Tote — Navy",
-    "price": 2199,
-    "tags": ["Work"],
-    "img": "assets/images/tote_bags_catlog/13.png",
-    "badge": "Business Ready",
-    "alt": "Navy professional tote - Elegant organic cotton tote for office use"
-  },
-  {
-    "name": "Weekend Tote — Sage",
-    "price": 1899,
-    "tags": ["Market"],
-    "img": "assets/images/tote_bags_catlog/12.png",
-    "badge": "Weekend Favorite",
-    "alt": "Sage weekend tote - Versatile organic cotton tote for casual outings"
-  }
-]
+﻿[
+    {
+        "name":  "Elegance",
+        "price":  699,
+        "tags":  [
 
+                 ],
+        "img":  "assets/images/tote_bags_catlog/elegance.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Elegance"
+    },
+    {
+        "name":  "Fun",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/fun.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Fun"
+    },
+    {
+        "name":  "Girls Don\u0027t Cry",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/girls don\u0027t cry.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Girls Don\u0027t Cry"
+    },
+    {
+        "name":  "Stamp",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/stamp.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Stamp"
+    },
+    {
+        "name":  "Zen",
+        "price":  699,
+        "tags":  [
+
+                 ],
+        "img":  "assets/images/tote_bags_catlog/zen.png",
+        "badge":  "",
+        "alt":  "Haridha Tote - Zen"
+    }
 ]
