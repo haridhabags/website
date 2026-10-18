@@ -19,3 +19,6 @@ details{background:var(--card);padding:14px 18px;border-radius:12px;margin:10px 
 footer{text-align:center;padding:40px 5vw 90px;color:var(--mut)}
 .fab{position:fixed;right:16px;bottom:16px;background:#25a244;color:#fff;padding:12px 20px;border-radius:99px;text-decoration:none;font-weight:600;box-shadow:0 4px 14px #0004}
 @media(max-width:760px){.hero,.pd{grid-template-columns:1fr}.hd nav a:not(.btn){display:none}}
+.brand img{height:44px;width:auto;max-width:180px;border-radius:0;display:block}
+.hd nav a{white-space:nowrap}
+.hd{gap:12px;flex-wrap:wrap}
